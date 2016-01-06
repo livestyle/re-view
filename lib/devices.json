@@ -1,0 +1,176 @@
+[
+  {
+    "title": "LG Optimus One",
+    "width": 213,
+    "height": 320,
+    "dpi": 1.5
+  },
+  {
+    "title": "Google Nexus S; HTC Evo, Touch HD, Desire HD, Desire; LG Optimus 2X, Optimus 3D, Optimus Black; Nokia Lumia 7X0, Lumia 8XX, Lumia 900, N800, N810, N900; Samsung Galaxy S, S II, W",
+    "width": 320,
+    "height": 533,
+    "dpi": 1.5
+  },
+  {
+    "title": "Apple iPhone 5",
+    "width": 320,
+    "height": 568,
+    "dpi": 2
+  },
+  {
+    "title": "Motorola Defy, Droid, Droid X, Milestone",
+    "width": 320,
+    "height": 569,
+    "dpi": 1.5
+  },
+  {
+    "title": "Nokia C5, C6, C7, N97, N8, X7",
+    "width": 360,
+    "height": 640,
+    "dpi": 1
+  },
+  {
+    "title": "HTC Sensation, Evo 3D",
+    "width": 360,
+    "height": 640,
+    "dpi": 1.5
+  },
+  {
+    "title": "BlackBerry Z30; HTC One X, EVO LTE; Samsung Galaxy Note II; Samsung Galaxy S III, Galaxy Nexus; Sony Xperia S, Ion",
+    "width": 360,
+    "height": 640,
+    "dpi": 2
+  },
+  {
+    "title": "Google Nexus 5; Samsung Galaxy Note 3; Samsung Galaxy S4; Sony Xperia Z, Z1",
+    "width": 360,
+    "height": 640,
+    "dpi": 3
+  },
+  {
+    "title": "HTC One M7",
+    "width": 360,
+    "height": 615,
+    "dpi": 3
+  },
+  {
+    "title": "Apple iPhone 6",
+    "width": 375,
+    "height": 667,
+    "dpi": 2
+  },
+  {
+    "title": "BlackBerry Z10; Google Nexus 4; LG Optimus G",
+    "width": 384,
+    "height": 640,
+    "dpi": 2
+  },
+  {
+    "title": "BlackBerry Classic",
+    "width": 390,
+    "height": 374,
+    "dpi": 1.84375
+  },
+  {
+    "title": "Samsung Galaxy Note",
+    "width": 400,
+    "height": 640,
+    "dpi": 2
+  },
+  {
+    "title": "Apple iPhone 6 Plus",
+    "width": 414,
+    "height": 736,
+    "dpi": 3
+  },
+  {
+    "title": "LG Optimus LTE, Optimus 4X HD",
+    "width": 424,
+    "height": 753,
+    "dpi": 1.7
+  },
+  {
+    "title": "Sony Xperia Sola, U",
+    "width": 480,
+    "height": 854,
+    "dpi": 1
+  },
+  {
+    "title": "BlackBerry Passport",
+    "width": 504,
+    "height": 462,
+    "dpi": 2.856250047683716
+  },
+  {
+    "title": "Motorola Droid 3, Droid 4, Droid Razr, Atrix 4G, Atrix 2",
+    "width": 540,
+    "height": 960,
+    "dpi": 1
+  },
+  {
+    "title": "Motorola Droid Razr HD",
+    "width": 720,
+    "height": 1280,
+    "dpi": 1
+  },
+  {
+    "title": "Google Nexus 7 2",
+    "width": 960,
+    "height": 600,
+    "dpi": 2
+  },
+  {
+    "title": "Google Nexus 7",
+    "width": 966,
+    "height": 604,
+    "dpi": 1.325
+  },
+  {
+    "title": "Amazon Kindle Fire (First Generation); BlackBerry PlayBook; Samsung Galaxy Tab",
+    "width": 1024,
+    "height": 600,
+    "dpi": 1
+  },
+  {
+    "title": "Apple iPad 1 / 2 / iPad Mini",
+    "width": 1024,
+    "height": 768,
+    "dpi": 1
+  },
+  {
+    "title": "Apple iPad 3 / 4",
+    "width": 1024,
+    "height": 768,
+    "dpi": 2
+  },
+  {
+    "title": "Google Nexus 10",
+    "width": 1280,
+    "height": 800,
+    "dpi": 2
+  },
+  {
+    "title": "Motorola Xoom, Xyboard; Samsung Galaxy Tab 7.7, 8.9, 10.1; Generic notebook",
+    "width": 1280,
+    "height": 800,
+    "dpi": 1
+  },
+  {
+    "title": "Notebook with HiDPI screen",
+    "width": 1440,
+    "height": 900,
+    "dpi": 2
+  },
+  {
+    "title": "Amazon Kindle Fire HDX 7″",
+    "width": 1920,
+    "height": 1200,
+    "dpi": 2
+  },
+  {
+    "title": "Amazon Kindle Fire HDX 8.9″",
+    "width": 2560,
+    "height": 1600,
+    "dpi": 2
+  }
+]

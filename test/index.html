@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Re:View layout test</title>
+	<link rel="stylesheet" href="../style/main.css" />
+	<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.reel {
+		position: relative;
+		padding: 50px;
+		white-space: nowrap;
+	}
+	</style>
+</head>
+<body>
+	<div class="reel"></div>
+	<script src="../dist/index.js"></script>
+	<script>
+	(function() {
+		var devices = [
+			{width: 375, height: 667, dpi: 2, autoMount: true, resize: true, maxViewportWidth: 600},
+			{width: 375, height: 667, dpi: 2, autoMount: true}
+		];
+
+		var target = document.querySelector('.reel');
+		devices.forEach(dev => {
+			var view = new reView.View('inner.html', dev, {autoMount: true});
+			target.appendChild(view.element);
+		});
+	})();
+	</script>
+</body>
+</html>
