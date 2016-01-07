@@ -12,7 +12,8 @@ const defaultOptions = {
 	detectGlobals: false,
 	babelify: true,
 	babelOptions: {
-		presets: ['es2015']
+		presets: ['es2015'],
+		global: true
 	}
 };
 

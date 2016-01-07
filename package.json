@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "eventemitter3": "^1.1.1",
+    "page-sync": "livestyle/page-sync",
     "xtend": "^4.0.1"
   }
 }

@@ -2,9 +2,12 @@
 	position: relative;
 	display: inline-block;
 	min-width: 200px;
-	margin-right: 50px;
 	background: #fff;
-	box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.2);
+}
+
+.emmet-re-view__item:not(:first-child) {
+	margin-left: 50px;
 }
 
 .emmet-re-view__item[data-state="resizing"]::before {
@@ -29,6 +32,7 @@
 	z-index: 11;
 	opacity: 0;
 	transition: opacity 0.3s;
+	display: none;
 }
 
 .emmet-re-view__item-resize-handle:before {
@@ -58,4 +62,25 @@
 	left: 0;
 	border: 0;
 	transform-origin: 0 0;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.emmet-re-view__reel {
+	position: relative;
+	padding: 50px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+/* When item is mounted and ready */
+.emmet-re-view__item_ready .emmet-re-view__item-resize-handle {
+	display: block;
+}
+
+.emmet-re-view__item_ready .emmet-re-view__item-iframe {
+	opacity: 1;;
 }

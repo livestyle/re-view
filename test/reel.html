@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Re:View layout test</title>
+	<link rel="stylesheet" href="../style/main.css" />
+	<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.layout {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #e5e5e5;
+	}
+	</style>
+</head>
+<body>
+	<div class="layout"></div>
+	<div class="reel"></div>
+	<script src="../dist/index.js"></script>
+	<script>
+	(function() {
+		var specs = [
+			{width: 213},
+			{width: 320},
+			{width: 360},
+			{width: 375},
+			{width: 400},
+			{width: 720}
+		];
+
+		var options = {
+			height: '100%',
+			maxViewportWidth: 600,
+			resize: true
+		};
+
+		var target = document.querySelector('.layout');
+		var reel = reView.reel('inner.html', specs, options);
+		target.appendChild(reel.element);
+		reel.show().then(views => {
+			reel.mount();
+			console.log('done!');
+		});
+	})();
+	</script>
+</body>
+</html>
