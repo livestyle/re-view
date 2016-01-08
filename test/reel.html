@@ -18,10 +18,22 @@
 		bottom: 0;
 		background: #e5e5e5;
 	}
+
+	.controls {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		z-index: 20;
+	}
 	</style>
 </head>
 <body>
-	<div class="layout"></div>
+	<div class="layout">
+		<div class="controls">
+			<button class="add">Add</button>
+			<button class="remove">Remove</button>
+		</div>
+	</div>
 	<div class="reel"></div>
 	<script src="../dist/index.js"></script>
 	<script>
@@ -42,12 +54,19 @@
 		};
 
 		var target = document.querySelector('.layout');
-		var reel = reView.reel('inner.html', specs, options);
-		target.appendChild(reel.element);
-		reel.show().then(views => {
-			reel.mount();
-			console.log('done!');
-		});
+		var reel = null;
+
+		document.querySelector('.add').onclick = () => {
+			reel = reView.reel('inner.html', specs, options);
+			target.appendChild(reel.element);
+			reel.show();
+		};
+		document.querySelector('.remove').onclick = () => {
+			reel.destroy().then(() => {
+				target.removeChild(reel.element);
+				reel = null;
+			});
+		};
 	})();
 	</script>
 </body>
