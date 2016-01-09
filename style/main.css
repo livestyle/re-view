@@ -56,6 +56,13 @@
 	opacity: 1;
 }
 
+.emmet-re-view__item-iframe-holder {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 .emmet-re-view__item-iframe {
 	position: absolute;
 	top: 0;
@@ -76,11 +83,32 @@
 	overflow: auto;
 }
 
+.emmet-re-view__wall {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 50px;
+	box-sizing: border-box;
+	text-align: justify;
+	transform-origin: 0 0;
+}
+
+.emmet-re-view__wall::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+.emmet-re-view__wall .emmet-re-view__item {
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+
 /* When item is mounted and ready */
 .emmet-re-view__item_ready .emmet-re-view__item-resize-handle {
 	display: block;
 }
 
 .emmet-re-view__item_ready .emmet-re-view__item-iframe {
-	opacity: 1;;
+	opacity: 1;
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Re:View layout test</title>
+	<link rel="stylesheet" href="../style/main.css" />
+	<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	.layout {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #e5e5e5;
+		overflow: hidden;
+	}
+
+	.controls {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		z-index: 20;
+	}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<!-- <div class="controls">
+			<button class="add">Add</button>
+			<button class="remove">Remove</button>
+		</div> -->
+	</div>
+	<script src="../dist/index.js"></script>
+	<script>
+	(function() {
+		var target = document.querySelector('.layout');
+		var options = {usePageViewport: true};
+		var wall = reView.wall('inner.html', reView.devices, options);
+		target.appendChild(wall.element);
+		wall.show();
+	})();
+	</script>
+</body>
+</html>
