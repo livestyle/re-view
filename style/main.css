@@ -35,7 +35,7 @@
 	display: none;
 }
 
-.emmet-re-view__item-resize-handle:before {
+.emmet-re-view__item-resize-handle::before {
 	content: '. . .';
 	font-size: 15px;
 	font-family: arial, sans-serif;
