@@ -42,7 +42,10 @@
 	<script>
 	(function() {
 		var target = document.querySelector('.layout');
-		var options = {usePageViewport: true};
+		var options = {
+			usePageViewport: true,
+			itemMargin: 20
+		};
 		var wall = reView.wall('inner.html', reView.devices, options);
 		target.appendChild(wall.element);
 		wall.show();

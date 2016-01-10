@@ -87,9 +87,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	padding: 50px;
-	box-sizing: border-box;
-	text-align: justify;
+	text-align: center;
 	transform-origin: 0 0;
 }
 
@@ -101,7 +99,7 @@
 
 .emmet-re-view__wall .emmet-re-view__item {
 	vertical-align: top;
-	margin-bottom: 50px;
+	margin: 0;
 }
 
 /* When item is mounted and ready */
