@@ -89,6 +89,8 @@
 	top: 0;
 	text-align: center;
 	transform-origin: 0 0;
+	transform-style: preserve-3d;
+	perspective: 1500px;
 }
 
 .emmet-re-view__wall::after {
@@ -100,6 +102,9 @@
 .emmet-re-view__wall .emmet-re-view__item {
 	vertical-align: top;
 	margin: 0;
+	backface-visibility: visible;
+	transform-origin: 50% 50%;
+	box-shadow: none;
 }
 
 /* When item is mounted and ready */

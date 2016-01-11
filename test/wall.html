@@ -11,32 +11,33 @@
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
+		background: #e5e5e5;
 	}
 
 	.layout {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: #e5e5e5;
-		overflow: hidden;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 50px;
+		border: 1px solid red;
+		z-index: 3;
 	}
 
 	.controls {
 		position: absolute;
 		bottom: 10px;
 		left: 50%;
-		z-index: 20;
+		z-index: 2;
 	}
 	</style>
 </head>
 <body>
 	<div class="layout">
-		<!-- <div class="controls">
-			<button class="add">Add</button>
-			<button class="remove">Remove</button>
-		</div> -->
+	</div>
+	<div class="controls">
+		<button class="add">Add</button>
+		<button class="remove">Remove</button>
 	</div>
 	<script src="../dist/index.js"></script>
 	<script>
@@ -46,9 +47,23 @@
 			usePageViewport: true,
 			itemMargin: 20
 		};
-		var wall = reView.wall('inner.html', reView.devices, options);
-		target.appendChild(wall.element);
-		wall.show();
+		var rect = {
+			width: target.offsetWidth, 
+			height: target.offsetHeight
+		};
+		var wall;
+
+		document.querySelector('.add').onclick = () => {
+			wall = reView.wall('inner.html', reView.devices, options);
+			target.appendChild(wall.element);
+			wall.show(rect).then(() => console.log('done!'));
+		};
+		document.querySelector('.remove').onclick = () => {
+			wall.destroy().then(() => {
+				target.removeChild(wall.element);
+				wall = null;
+			});
+		};
 	})();
 	</script>
 </body>
