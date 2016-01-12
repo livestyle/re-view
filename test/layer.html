@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Layer test</title>
+	<style>
+	.viewport {
+		width: 400px;
+		height: 300px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -200px;
+		margin-top: -150px;
+		border: 1px solid red;
+	}
+
+	.mover {
+		position: absolute;
+	}
+
+	.layer {
+		width: 700px;
+		height: 400px;
+		position: absolute;
+		background: blue;
+		opacity: 0.3;
+		transform-origin: 0 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="viewport">
+		<div class="layer" data-min-scale="0.6" data-max-scale="2"></div>
+	</div>
+	<script src="../dist/device-wall-layer.js"></script>
+	<script>
+	reView.default(
+		document.querySelector('.viewport'),
+		document.querySelector('.layer')
+	)
+	</script>
+</body>
+</html>

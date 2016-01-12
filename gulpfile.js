@@ -11,7 +11,7 @@ const isWatching = ~process.argv.indexOf('watch');
 const production = ~process.argv.indexOf('--production');
 
 gulp.task('js', () => {
-	return gulp.src('./index.js')
+	return gulp.src(['./index.js', './lib/device-wall-layer.js'])
 	.pipe(js({
 		standalone: 'reView', 
 		debug: true,
