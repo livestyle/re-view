@@ -107,6 +107,24 @@
 	box-shadow: none;
 }
 
+.emmet-re-view__wall-control {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	box-shadow: inset 0 0 30px green;
+}
+
+.emmet-re-view__wall-control-scroller {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	opacity: 0;
+}
+
 /* When item is mounted and ready */
 .emmet-re-view__item_ready .emmet-re-view__item-resize-handle {
 	display: block;
