@@ -16,11 +16,10 @@
 
 	.layout {
 		position: absolute;
-		top: 20px;
-		left: 20px;
-		right: 20px;
-		bottom: 50px;
-		border: 1px solid red;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
 		z-index: 3;
 	}
 
@@ -28,13 +27,12 @@
 		position: absolute;
 		bottom: 10px;
 		left: 50%;
-		z-index: 2;
+		z-index: 200;
 	}
 	</style>
 </head>
 <body>
-	<div class="layout">
-	</div>
+	<div class="layout"></div>
 	<div class="controls">
 		<button class="add">Add</button>
 		<button class="remove">Remove</button>
@@ -47,20 +45,16 @@
 			usePageViewport: true,
 			itemMargin: 20
 		};
-		var rect = {
-			width: target.offsetWidth, 
-			height: target.offsetHeight
-		};
 		var wall;
 
-		document.querySelector('.add').onclick = () => {
-			wall = reView.wall('inner.html', reView.devices, options);
-			target.appendChild(wall.element);
-			wall.show(rect).then(() => console.log('done!'));
+		document.querySelector('.add').onclick = function() {
+			wall = reView.wall(target, 'inner.html', reView.devices, options);
+			wall.show().then(function() {
+				console.log('done!');
+			});
 		};
-		document.querySelector('.remove').onclick = () => {
-			wall.destroy().then(() => {
-				target.removeChild(wall.element);
+		document.querySelector('.remove').onclick = function() {
+			wall.destroy().then(function() {
 				wall = null;
 			});
 		};
