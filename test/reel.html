@@ -57,15 +57,11 @@
 		var reel = null;
 
 		document.querySelector('.add').onclick = () => {
-			reel = reView.reel('inner.html', specs, options);
-			target.appendChild(reel.element);
+			reel = reView.reel(target, 'inner.html', specs, options);
 			reel.show();
 		};
 		document.querySelector('.remove').onclick = () => {
-			reel.destroy().then(() => {
-				target.removeChild(reel.element);
-				reel = null;
-			});
+			reel.destroy();
 		};
 	})();
 	</script>
