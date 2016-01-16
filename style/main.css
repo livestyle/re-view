@@ -23,6 +23,10 @@
 	margin-left: 50px;
 }
 
+.emmet-re-view__item[data-state="resizing"] {
+	z-index: 3;
+}
+
 .emmet-re-view__item[data-state="resizing"]::after {
 	position: absolute;
 	top: 0;
@@ -97,6 +101,21 @@
 	height: 100%;
 	overflow: auto;
 	z-index: 2;
+}
+
+/*
+ * When resizing view, create a special overlay to prevent focus stealing
+ * by sibling iframes
+ */
+.emmet-re-view__reel_resize::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	content: '';
+	display: block;
 }
 
 .emmet-re-view__wall {
