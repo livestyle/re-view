@@ -19,6 +19,22 @@
 	border-image: url(shadow.png) 43;
 }
 
+.emmet-re-view__item::after {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	padding-top: 5px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	content: attr(data-label);
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 12px;
+	color: #999;
+	text-shadow: 1px 1px 1px #fff;
+}
+
 .emmet-re-view__item:not(:first-child) {
 	margin-left: 50px;
 }
