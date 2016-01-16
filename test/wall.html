@@ -41,6 +41,24 @@
 	<script>
 	(function() {
 		var target = document.querySelector('.layout');
+		var devices = [
+		    {"width": 213,  "height": 320},
+		    {"width": 320,  "height": 568},
+		    {"width": 360,  "height": 640},
+		    {"width": 360,  "height": 640},
+		    {"width": 375,  "height": 667},
+		    {"width": 384,  "height": 640},
+		    {"width": 400,  "height": 640},
+		    {"width": 414,  "height": 736},
+		    {"width": 540,  "height": 960},
+		    {"width": 720,  "height": 1280},
+		    {"width": 960,  "height": 600},
+		    {"width": 1024, "height": 600},
+		    {"width": 1024, "height": 768},
+		    {"width": 1024, "height": 768},
+		    {"width": 1280, "height": 800}
+		];
+
 		var options = {
 			usePageViewport: true,
 			itemMargin: 20
@@ -48,7 +66,7 @@
 		var wall;
 
 		document.querySelector('.add').onclick = function() {
-			wall = reView.wall(target, 'inner.html', reView.devices, options);
+			wall = reView.wall(target, 'inner.html', devices, options);
 			wall.show().then(function() {
 				console.log('done!');
 			});
