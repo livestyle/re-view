@@ -38,6 +38,8 @@
 	<script src="../dist/index.js"></script>
 	<script>
 	(function() {
+		var reel;
+		var target = document.querySelector('.layout');
 		var specs = [
 			{width: 213},
 			{width: 320},
@@ -45,22 +47,18 @@
 			{width: 375},
 			{width: 400},
 			{width: 720}
-		];
+		].map(function(spec) {
+			spec.height = '100%';
+			spec.maxViewportWidth = 600;
+			spec.resize = true;
+			return spec;
+		});
 
-		var options = {
-			height: '100%',
-			maxViewportWidth: 600,
-			resize: true
-		};
-
-		var target = document.querySelector('.layout');
-		var reel = null;
-
-		document.querySelector('.add').onclick = () => {
-			reel = reView.reel(target, 'inner.html', specs, options);
+		document.querySelector('.add').onclick = function() {
+			reel = reView.reel(target, 'inner.html', specs);
 			reel.show();
 		};
-		document.querySelector('.remove').onclick = () => {
+		document.querySelector('.remove').onclick = function() {
 			reel.destroy();
 		};
 	})();

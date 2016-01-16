@@ -40,6 +40,7 @@
 	<script src="../dist/index.js"></script>
 	<script>
 	(function() {
+		var wall;
 		var target = document.querySelector('.layout');
 		var devices = [
 		    {"width": 213,  "height": 320},
@@ -57,16 +58,13 @@
 		    {"width": 1024, "height": 768},
 		    {"width": 1024, "height": 768},
 		    {"width": 1280, "height": 800}
-		];
-
-		var options = {
-			usePageViewport: true,
-			itemMargin: 20
-		};
-		var wall;
+		].map(function(spec) {
+			spec.usePageViewport = true;
+			return spec;
+		});
 
 		document.querySelector('.add').onclick = function() {
-			wall = reView.wall(target, 'inner.html', devices, options);
+			wall = reView.wall(target, 'inner.html', devices, {itemMargin: 20});
 			wall.show().then(function() {
 				console.log('done!');
 			});
