@@ -1,27 +1,58 @@
 @import "./variables.scss";
 
 .emmet-re-view__picker {
-    @include default-font;
-    @include toggler;
-    border-radius: 15px;
-    margin: 0 20px 0 0;
-    position: relative;
+    $width: 700px;
+    $padding: 0px;
 
-    &::after {
-        content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgPjxnIHN0cm9rZT0iIzk3OTc5NyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTQgMGw0IDUuNWgtOHoiLz48cGF0aCBkPSJNNCAxNGwtNC01LjVoOHoiLz48L2c+PC9zdmc+Cg==');
-        display: inline-block;
-        position: absolute;
-        top: 2px;
-        right: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+    color: #555;
+    display: flex;
+    width: $width;
+    padding: $padding;
+    font-size: 13px;
+    top: 100%;
+    left: 50%;
+    margin-left: -$width / 2 - $padding;
+    margin-top: 11px;
+    animation: re-view-picker-show 0.25s ease-out;
+
+    &-section {
+        width: 50%;
+        box-sizing: border-box;
+        @include default-font;
+        padding: 20px;
+        position: relative;
+
+        &-title {
+            font-weight: 200;
+            color: #000;
+            font-size: 24px;
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        &-content {
+            height: 330px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .emmet-re-view__list {
+            height: 100%;
+        }
     }
+}
 
-    &-label {
-        display: inline-block;
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        vertical-align: top;
-        margin-right: 10px;
+@keyframes re-view-picker-show {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
     }
 }

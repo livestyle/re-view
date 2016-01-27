@@ -1,12 +1,13 @@
 @import "./variables.scss";
 
 .emmet-re-view__switcher {
-    display: block;
     list-style-type: none;
     margin: 0 20px 0 0;
     padding: 0;
     @include default-font;
     display: flex;
+    position: relative;
+    z-index: 2;
 
     &-item {
         display: inline-block;
