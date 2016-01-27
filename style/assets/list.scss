@@ -1,0 +1,135 @@
+@import "./variables.scss";
+
+@mixin pick-many-mode {
+    display: inline-block;
+    transition: transform $ui-transition-time;
+
+    [data-mode="pick-many"] & {
+        transform: translateX(20px);
+    }
+}
+
+.emmet-re-view__list {
+    display: block;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    max-height: 100%;
+    position: relative;
+    overflow: auto;
+    @include default-font;
+    transition: transform $ui-transition-time;
+
+    &_hidden {
+        transform: translateY(100%);
+    }
+
+    &-item {
+        border-bottom: 1px solid #ddd;
+        /* transition: background-color 0.3s; */
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            color: #000;
+            background: #D8FDF6;
+        }
+
+        &-input {
+            position: absolute;
+            top: 7px;
+            margin-left: -15px;
+            @include pick-many-mode;
+        }
+
+        &-label {
+            display: block;
+            padding: 7px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+            &-inner {
+                @include pick-many-mode;
+                flex-grow: 1;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+
+        &_user-defined &-label-inner {
+            font-weight: bold;
+        }
+
+        &-info {
+            font-size: 0.85em;
+            color: #aaa;
+            transition: transform 0.3s;
+        }
+
+        &_with-controls:hover &-info {
+            transform: translateY(140%);
+        }
+
+        &-controls {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            white-space: nowrap;
+            transition: transform 0.3s;
+        }
+
+        &_with-controls:hover &-controls {
+            transform: translateY(100%);
+        }
+
+        &-control {
+            $icon-size: 9px;
+            display: inline-block;
+            padding: 4px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            line-height: $icon-size;
+            margin: 6px 4px;
+            cursor: pointer;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::before {
+                width: $icon-size;
+                height: $icon-size;
+                content: '';
+                display: inline-block;
+                background-size: 100% 100%;
+            }
+
+            &_edit {
+                border-color: #5db198;
+                &::before {
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MjguODk5IiBoZWlnaHQ9IjUyOC44OTkiIHZpZXdCb3g9IjAgMCA1MjguODk5IDUyOC44OTkiPjxwYXRoIGZpbGw9IiM1ZGIxOTgiIGQ9Ik0zMjguODgzIDg5LjEyNWwxMDcuNTkgMTA3LjU4OS0yNzIuMzQgMjcyLjM0LTEwNy41MjktMTA3LjU4OSAyNzIuMjc5LTI3Mi4zNHptMTg5LjIzLTI1Ljk0OGwtNDcuOTgxLTQ3Ljk4MWMtMTguNTQzLTE4LjU0My00OC42NTMtMTguNTQzLTY3LjI1OSAwbC00NS45NjEgNDUuOTYxIDEwNy41OSAxMDcuNTkgNTMuNjExLTUzLjYxMWMxNC4zODItMTQuMzgzIDE0LjM4Mi0zNy41NzcgMC01MS45NTl6bS01MTcuODEzIDQ0OS41MTNjLTEuOTU4IDguODEyIDUuOTk4IDE2LjcwOCAxNC44MTEgMTQuNTY1bDExOS44OTEtMjkuMDY5LTEwNy41MjktMTA3LjU4OS0yNy4xNzMgMTIyLjA5M3oiLz48L3N2Zz4K');
+                }
+            }
+
+            &_remove {
+                border-color: #e3544a;
+                &::before {
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NS45MzkiIGhlaWdodD0iOTUuOTM5IiB2aWV3Qm94PSIwIDAgOTUuOTM5IDk1LjkzOSI+PHBhdGggZmlsbD0iI2UzNTQ0YSIgZD0iTTYyLjgxOSA0Ny45N2wzMi41MzMtMzIuNTM0Yy43ODEtLjc4MS43ODEtMi4wNDcgMC0yLjgyOGwtMTIuMDE5LTEyLjAyMmMtLjM3NS0uMzc1LS44ODUtLjU4Ni0xLjQxNC0uNTg2LS41MyAwLTEuMDM5LjIxMS0xLjQxNC41ODZsLTMyLjUzNSAzMi41MzUtMzIuNTM1LTMyLjUzNWMtLjc1LS43NS0yLjA3OC0uNzUtMi44MjggMGwtMTIuMDIgMTIuMDIyYy0uNzgxLjc4MS0uNzgxIDIuMDQ3IDAgMi44MjhsMzIuNTM0IDMyLjUzNC0zMi41MzQgMzIuNTM0Yy0uNzgxLjc4MS0uNzgxIDIuMDQ3IDAgMi44MjhsMTIuMDIgMTIuMDIxYy4zNzUuMzc1Ljg4NC41ODYgMS40MTQuNTg2LjUzIDAgMS4wMzktLjIxMSAxLjQxNC0uNTg2bDMyLjUzNS0zMi41MzUgMzIuNTM1IDMyLjUzNWMuMzc1LjM3NS44ODQuNTg2IDEuNDE0LjU4Ni41MjkgMCAxLjAzOS0uMjExIDEuNDE0LS41ODZsMTIuMDItMTIuMDIxYy43ODEtLjc4MS43ODEtMi4wNDggMC0yLjgyOGwtMzIuNTM0LTMyLjUzNHoiLz48L3N2Zz4K');
+                }
+            }
+        }
+
+
+        input:checked + &-label {
+            background: #DCDCDC;
+            box-shadow: inset 2px 2px 9px 0px rgba(0,0,0,0.3);
+            color: #757575;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.50);
+        }
+    }
+}

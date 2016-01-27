@@ -1,7 +1,7 @@
 'use strict';
 
-import View from './lib/view';
-import reel from './lib/reel';
-import wall from './lib/wall';
+import app from './lib/app';
+import reel from './lib/view/breakpoints';
+import wall from './lib/view/device-wall';
 
-export {View, reel, wall};
+export {app, reel, wall};

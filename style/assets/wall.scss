@@ -1,0 +1,41 @@
+.emmet-re-view__wall {
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	transform-origin: 0 0;
+	transform-style: preserve-3d;
+	perspective: 1500px;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+
+	.emmet-re-view__item {
+		vertical-align: top;
+		margin: 0;
+		backface-visibility: visible;
+		transform-origin: 50% 50%;
+		/* box-shadow: none; */
+	}
+
+	&-control {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		box-shadow: inset 0 0 30px green;
+
+		&-scroller {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			opacity: 0;
+		}
+	}
+}

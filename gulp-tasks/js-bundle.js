@@ -1,28 +1,41 @@
 'use strict';
 
 const path = require('path');
-const through = require('through2');
+const stream = require('stream');
 const browserify = require('browserify');
 const watchify = require('watchify');
-const extend = require('xtend');
 
 const _bundles = {};
 const defaultOptions = {
 	debug: false,
-	detectGlobals: false,
+	detectGlobals: true,
 	babelify: true,
 	babelOptions: {
-		presets: ['es2015'],
-		global: true
+		global: true,
+		presets: [require('babel-preset-es2015')],
+		plugins: [
+			[require('babel-plugin-transform-react-jsx'), {pragma: 'tr'}],
+			require('babel-plugin-transform-object-rest-spread'),
+			require('babel-plugin-transform-node-env-inline')
+		]
 	}
 };
 
 module.exports = function(options) {
-	return through.obj(function(file, enc, next) {
+	return transform(function(file, enc, next) {
 		file.contents = jsBundle(file, options)
 		.on('error', err => this.emit('error', err));
 		next(null, file);
 	});
+}
+
+function extend() {
+	var args = Array.prototype.slice.call(arguments, 0);
+	return args.filter(Boolean).reduce((r, src) => Object.assign(r, src), {});
+}
+
+function transform(transform, flush) {
+	return new stream.Transform({transform, flush, objectMode: true});
 }
 
 function jsBundle(file, options) {
