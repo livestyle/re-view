@@ -13,7 +13,7 @@
 	 * When resizing view, create a special overlay to prevent focus stealing
 	 * by sibling iframes
 	 */
-	&::before {
+	&_resize .emmet-re-view__item-iframe-holder::before {
 		position: absolute;
 		top: 0;
 		right: 0;
