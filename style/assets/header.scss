@@ -1,0 +1,73 @@
+@import "./variables.scss";
+
+.emmet-re-view__header {
+    position: relative;
+    z-index: 2;
+
+    &-wrap {
+        position: relative;
+        padding: 10px;
+        line-height: 1;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform $ui-transition-time;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &:hover &-wrap {
+        transform: translateY(0);
+    }
+
+    &-content {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &-icons {
+        width: 16px;
+        margin: -5px 0;
+    }
+
+    &_auto-hide {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 20px;
+    }
+
+    &_auto-hide &-wrap {
+        transform: translateY($header-autohide-offset);
+        animation: re-view-header-autohide 1.5s 2s;
+    }
+
+    &_force-overlay::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &_force-overlay &-wrap {
+        transform: none !important;
+    }
+}
+
+@keyframes re-view-header-autohide {
+    from {
+        transform: translateY($header-autohide-offset);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY($header-autohide-offset);
+    }
+}
