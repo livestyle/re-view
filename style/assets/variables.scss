@@ -1,8 +1,10 @@
 $main-font: 'helvetica neue', helvetica, arial, sans-serif;
 $main-color: #20b89a;
 $main-color-hl: lighten($main-color, 5%);
-$ui-transition-time: 0.3s;
 $header-autohide-offset: -120%;
+$ui-transition-time: 0.3s;
+$ui-bg-color: rgba(255, 255, 255, 0.9);
+
 
 @mixin default-font {
     font-family: $main-font;
