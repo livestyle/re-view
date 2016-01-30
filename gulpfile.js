@@ -43,7 +43,7 @@ gulp.task('watch', ['build'], () => {
 	gulp.watch('./style/**/*.scss', ['style']);
 });
 
-gulp.task('build', ['script', 'style', 'assets']);
+gulp.task('build', ['script', 'style']);
 gulp.task('default', ['build']);
 
 function pass() {
