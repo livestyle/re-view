@@ -40,6 +40,9 @@
 
     &_auto-hide &-wrap {
         transform: translateY($header-autohide-offset);
+    }
+
+    &_notify-auto-hide &-wrap {
         animation: re-view-header-autohide 1.5s 2s;
     }
 
