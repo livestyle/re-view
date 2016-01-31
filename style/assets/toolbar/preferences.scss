@@ -1,0 +1,33 @@
+@import "../variables";
+
+.emmet-re-view__preferences {
+    width: 300px;
+    
+    &-row:not(:first-child) {
+        margin-top: 15px;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        padding-top: 15px;
+    }
+
+    &-comment {
+        display: block;
+        font-size: 0.85em;
+        color: #999;
+        line-height: 1.6;
+        margin-top: 2px;
+    }
+
+    input[name="maxViewportWidth"] {
+        box-sizing: border-box;
+        padding: 3px;
+        font-size: 1em;
+        font-family: sans-serif;
+        margin-left: 5px;
+        width: 5em;
+    }
+
+    [disabled],
+    [data-disabled], {
+        color: #ccc;
+    }
+}

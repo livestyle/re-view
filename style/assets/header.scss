@@ -3,6 +3,7 @@
 .emmet-re-view__header {
     position: relative;
     z-index: 2;
+    font-family: $main-font;
 
     &-wrap {
         position: relative;
@@ -28,6 +29,8 @@
     &-icons {
         width: 16px;
         margin: -5px 0;
+        position: relative;
+        z-index: 3;
     }
 
     &_auto-hide {
