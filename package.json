@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "deep-equal": "^1.0.1",
+    "deepmerge": "^0.2.10",
     "eventemitter3": "^1.1.1",
     "page-sync": "livestyle/page-sync",
     "redux": "^3.0.5",

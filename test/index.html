@@ -14,6 +14,40 @@
 </head>
 <body>
     <script src="../out/index.js"></script>
-	<script>reView.default(document.body);</script>
+	<script>
+    reView.default(document.body, {
+        initialState: {
+            pageUrl: 'inner.html',
+            ui: {
+                mode: 'device-wall'
+            },
+            breakpoints: [
+                {width: 213},
+                {width: 320},
+                {width: 360},
+                {width: 375},
+                {width: 400},
+                {width: 720}
+            ],
+            user: {
+                devices: [{
+                    "id": "942ea870-c47d-11e5-b11f-03099e8ba412",
+                    "title": "AAA my dev",
+                    "width": "200",
+                    "height": "300",
+                    "user-agent": "Mozilla/5.0 (Linux; Android 4.0; LG-E975 Build/IMM76L) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
+                }],
+                presets: [{
+                    "id": "d2ee7d00-c479-11e5-abe8-abdaf6488318",
+                    "title": "Sample",
+                    "devices": [
+                        "apple-ipad",
+                        "amazon-kindle-fire-hdx-8-9"
+                    ]
+                }]
+            }
+        }
+    });
+    </script>
 </body>
 </html>
