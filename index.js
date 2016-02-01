@@ -10,11 +10,11 @@ import {createElement, removeElement} from './lib/utils';
  * Creates complete Re:view UI and returns its parent element
  * @return {Element}
  */
-export default function(container) {
+export default function(container, options={}) {
     var root = createElement('div', 'emmet-re-view');
     var header = tr.render(headerUI, store.getState());
     var content = createElement('div', 'emmet-re-view__content');
-    var view = viewUI(content);
+    var view = viewUI(content, options);
     root.appendChild(header.target);
     root.appendChild(content);
 
