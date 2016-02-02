@@ -30,6 +30,8 @@ html, body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background: #e5e5e5;
+    z-index: 9999;
 
     &__content {
         flex-grow: 1;
