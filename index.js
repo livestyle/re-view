@@ -3,6 +3,7 @@
 import tr from 'tiny-react';
 import headerUI from './lib/components/header';
 import viewUI from './lib/view';
+import findBreakpoins from './lib/find-breakpoints';
 import {store, subscribe, dispatch, getStateValue} from './lib/app';
 import {createElement, removeElement} from './lib/utils';
 import {APP} from './lib/action-names';
@@ -47,4 +48,4 @@ export default function(container, options={}) {
     };
 }
 
-export {subscribe, dispatch, getStateValue};
+export {subscribe, dispatch, getStateValue, findBreakpoins};
