@@ -42,6 +42,7 @@ export default function(container, options={}) {
         element: root,
         update,
         destroy() {
+            view.destroy();
             removeElement(root);
             unsubscribe();
         }
