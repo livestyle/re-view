@@ -51,6 +51,8 @@ html, body {
         margin: 0 10px 0 0;
         padding: 0;
         white-space: nowrap;
+        position: relative;
+        top: -3px;
 
         &-version {
             color: #d4d4d4;
