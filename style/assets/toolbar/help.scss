@@ -42,6 +42,18 @@
         }
     }
 
+    &-footer {
+        margin-top: 15px;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 0.85em;
+        border-top: 1px solid rgba(0,0,0,0.2);
+
+        a {
+            margin: 0 15px;
+        }
+    }
+
     p {
         margin-top: 0;
     }

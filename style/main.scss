@@ -60,4 +60,12 @@ html, body {
             top: -0.3em;
         }
     }
+
+    a {
+        color: #25907b;
+
+        &:hover {
+            color: #20b89a;
+        }
+    }
 }
