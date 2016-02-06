@@ -34,6 +34,7 @@ html, body {
     background: #e5e5e5;
     z-index: 9999;
     color: #000;
+    font-family: $main-font;
 
     &__content {
         flex-grow: 1;
