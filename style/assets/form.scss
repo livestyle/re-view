@@ -35,7 +35,7 @@
         text-shadow: -1px -1px 0px #fff;
         font-style: italic;
         display: block;
-        margin: 20px auto;
+        margin: 15px auto;
         padding: 0 10px;
         text-align: center;
     }
@@ -50,7 +50,11 @@
 
         &-item {
             padding: 0;
-            margin: 0 0 5px;
+            margin: 0;
+        }
+
+        &-item:not(:first-child) {
+            margin-top: 5px;
         }
     }
 
@@ -81,7 +85,7 @@
     .emmet-re-view__button {
         margin: 0 5px;
 
-        &[type=reset] {
+        &[type=reset], &[disabled] {
             color: #ccc;
             border-color: #ccc;
         }
