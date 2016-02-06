@@ -2,11 +2,15 @@
 
 .emmet-re-view__preferences {
     width: 300px;
-    
+
     &-row:not(:first-child) {
         margin-top: 15px;
         border-top: 1px solid rgba(0,0,0,0.2);
         padding-top: 15px;
+    }
+
+    &-row_auto-hide {
+        display: none;
     }
 
     &-comment {
