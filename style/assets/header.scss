@@ -4,6 +4,7 @@
     position: relative;
     z-index: 2;
     font-family: $main-font;
+    min-width: 1000px;
 
     &-wrap {
         position: relative;
@@ -31,6 +32,7 @@
         margin: -5px 0;
         position: relative;
         z-index: 3;
+        align-self: flex-start;
     }
 
     &_auto-hide {

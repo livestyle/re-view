@@ -10,6 +10,7 @@
 @import "./assets/reel.scss";
 @import "./assets/wall.scss";
 @import "./assets/toolbar.scss";
+@import "./assets/carbon-ads.scss";
 @import "./assets/scroll-override.scss";
 
 html, body {
@@ -48,13 +49,15 @@ html, body {
         font-size: 32px;
         margin: 0 10px 0 0;
         padding: 0;
+        white-space: nowrap;
 
         &-version {
             color: #d4d4d4;
+            vertical-align: super;
+            font-size: 14px;
+            margin-left: -0.3em;
+            position: relative;
+            top: -0.3em;
         }
-    }
-
-    &__carbon {
-        height: 100px;
     }
 }
