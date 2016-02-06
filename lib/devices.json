@@ -232,7 +232,7 @@
 		"dpi": 1
 	},
 	{
-		"id": "google-nexus-7-(1st-gen)",
+		"id": "google-nexus-7",
 		"title": "Google Nexus 7 (1st gen)",
 		"width": 966,
 		"height": 604,
@@ -240,7 +240,7 @@
 		"dpi": 1.325
 	},
 	{
-		"id": "samsung-galaxy-tab-7-7",
+		"id": "samsung-galaxy-tab-7",
 		"title": "Samsung Galaxy Tab 7.7, 8.9, 10.1",
 		"width": 1280,
 		"height": 800,

@@ -1,5 +1,10 @@
 [
     {
+        "id": "android-phones",
+        "title": "Android phones",
+        "devices": ["google-nexus-5", "htc-evo", "lg-optimus-lte", "motorola-droid-razr-hd", "samsung-galaxy-s-iii", "samsung-galaxy-note"]
+    },
+    {
         "id": "apple-phones",
         "title": "Apple phones",
         "devices": ["apple-iphone-3gs", "apple-iphone-4", "apple-iphone-5", "apple-iphone-6-plus", "apple-iphone-6"]
@@ -10,8 +15,8 @@
         "devices": ["apple-ipad", "apple-ipad-mini", "apple-ipad-mini-2"]
     },
     {
-        "id": "apple-devices",
-        "title": "Apple devices (phones & tablets)",
-        "devices": ["apple-iphone-3gs", "apple-iphone-4", "apple-iphone-5", "apple-iphone-6-plus", "apple-iphone-6", "apple-ipad", "apple-ipad-mini", "apple-ipad-mini-2"]
+        "id": "tablets",
+        "title": "Tablets",
+        "devices": ["apple-ipad", "apple-ipad-mini", "apple-ipad-mini-2", "motorola-xoom", "samsung-galaxy-tab", "samsung-galaxy-tab-7"]
     }
 ]
