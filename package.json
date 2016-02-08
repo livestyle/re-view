@@ -1,6 +1,6 @@
 {
   "name": "livestyle-re-view",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "LiveStyle Responsive View – creates views for media query breakpoints and devices",
   "main": "index.js",
   "scripts": {
