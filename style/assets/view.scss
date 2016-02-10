@@ -127,4 +127,15 @@
 	&_ready &-iframe {
 		opacity: 1;
 	}
+
+	.emmet-re-view__spinner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -16px;
+	}
+
+	&_ready .emmet-re-view__spinner {
+		display: none;
+	}
 }
