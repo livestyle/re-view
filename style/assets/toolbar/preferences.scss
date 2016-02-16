@@ -9,10 +9,6 @@
         padding-top: 15px;
     }
 
-    &-row_auto-hide {
-        display: none;
-    }
-
     &-comment {
         display: block;
         font-size: 0.85em;
@@ -33,5 +29,15 @@
     [disabled],
     [data-disabled], {
         color: #ccc;
+    }
+
+    &-donate {
+        color: $main-color;
+        border-bottom: 1px dotted currentColor;
+        cursor: pointer;
+
+        &:hover {
+            color: $main-color-hl;
+        }
     }
 }

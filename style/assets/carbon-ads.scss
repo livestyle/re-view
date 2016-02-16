@@ -1,8 +1,36 @@
+@import "./variables.scss";
+
 .emmet-re-view__carbon {
     width: 330px;
     height: 100px;
     margin: -10px 10px -10px 0;
-    overflow: hidden;
+    position: relative;
+
+    &-disable {
+        position: absolute;
+        z-index: 2;
+        width: 100px;
+        left: -2px;
+        text-align: center;
+        background: #DCDCDC;
+        padding: 3px;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #aaa;
+        cursor: pointer;
+
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+
+        &:hover {
+            color: #fff;
+            background: $main-color;
+        }
+    }
+
+    #carbonads {
+        overflow: hidden;
+    }
 
     .carbon-img {
         float: left;

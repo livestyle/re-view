@@ -30,7 +30,11 @@
                 {width: 400},
                 {width: 720}
             ],
-            patron: true,
+            donation: {
+                handler: function() {
+                    console.log('clicked on donation');
+                }
+            },
             user: {
                 devices: [{
                     "id": "942ea870-c47d-11e5-b11f-03099e8ba412",

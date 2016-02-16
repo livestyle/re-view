@@ -1,22 +1,8 @@
 @import "./variables.scss";
 
 .emmet-re-view__picker {
-    $width: 700px;
-    $padding: 0px;
-
-    position: absolute;
-    border-radius: 5px;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
-    color: #555;
+    @include popup;
     display: flex;
-    width: $width;
-    padding: $padding;
-    font-size: 13px;
-    top: 100%;
-    left: 50%;
-    margin-left: -$width / 2 - $padding;
-    margin-top: 11px;
     animation: re-view-picker-show 0.25s ease-out;
 
     &-section {
