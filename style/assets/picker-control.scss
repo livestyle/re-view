@@ -5,7 +5,7 @@
     @include toggler;
     border-radius: 15px;
     margin: 0 20px 0 0;
-    position: relative;
+    position: absolute;
     transition: transform 0.3s, opacity 0.3s;
 
     &_hidden {
@@ -24,7 +24,7 @@
 
     &-label {
         display: inline-block;
-        max-width: 200px;
+        max-width: 180px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

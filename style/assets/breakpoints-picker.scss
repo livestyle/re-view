@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.emmet-re-view__breakpoints-picker {
+    @include popup(450px);
+    padding: 20px;
+    animation: re-view-bp-picker-show 0.25s ease-out;
+
+    .emmet-re-view__switcher {
+        margin: 0 0 20px;
+        justify-content: center;
+    }
+
+    .emmet-re-view__list {
+        max-height: 250px;
+    }
+}
+
+@keyframes re-view-bp-picker-show {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}

@@ -22,18 +22,25 @@
             ui: {
                 mode: 'breakpoints'
             },
-            breakpoints: [
-                {width: 213},
-                {width: 320},
-                {width: 360},
-                {width: 375},
-                {width: 400},
-                {width: 720}
-            ],
+            breakpoints: {
+                items: {
+                    bp1: {query: 'q1', width: 213},
+                    bp2: {query: 'q2', width: 320},
+                    bp3: {query: 'q3', width: 360},
+                    bp4: {query: 'q4', width: 375},
+                    bp5: {query: 'q5', width: 400},
+                    bp6: {query: 'q6', width: 720}
+                },
+                selected: ['bp1', 'bp3', 'bp5'],
+                optimized: ['bp2', 'bp4']
+            },
             donation: {
                 handler: function() {
                     console.log('clicked on donation');
                 }
+            },
+            options: {
+                disableAnimations: true
             },
             user: {
                 devices: [{
