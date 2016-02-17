@@ -15,11 +15,14 @@
     }
 
     &::after {
-        content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgPjxnIHN0cm9rZT0iIzk3OTc5NyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTQgMGw0IDUuNWgtOHoiLz48cGF0aCBkPSJNNCAxNGwtNC01LjVoOHoiLz48L2c+PC9zdmc+Cg==');
+        content: '';
+        background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgPjxnIHN0cm9rZT0iIzk3OTc5NyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTQgMGw0IDUuNWgtOHoiLz48cGF0aCBkPSJNNCAxNGwtNC01LjVoOHoiLz48L2c+PC9zdmc+Cg==');
         display: inline-block;
         position: absolute;
-        top: 2px;
+        top: 6px;
         right: 10px;
+        width: 8px;
+        height: 14px;
     }
 
     &-label {
