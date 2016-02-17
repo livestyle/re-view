@@ -6,7 +6,7 @@ import viewUI from './lib/view';
 import findBreakpoints from './lib/find-breakpoints';
 import {store, subscribe, dispatch, getStateValue} from './lib/app';
 import {createElement, removeElement} from './lib/utils';
-import {APP, UI} from './lib/action-names';
+import {APP, UI, DONATION} from './lib/action-names';
 
 /**
  * Creates complete Re:view UI and returns its parent element
@@ -49,4 +49,4 @@ export default function(container, options={}) {
     };
 }
 
-export {subscribe, dispatch, getStateValue, findBreakpoints, UI, APP};
+export {subscribe, dispatch, getStateValue, findBreakpoints, UI, APP, DONATION};
