@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .emmet-re-view__breakpoints-picker {
-    @include popup(450px);
+    @include popup(470px);
     padding: 20px;
     animation: re-view-bp-picker-show 0.25s ease-out;
 
