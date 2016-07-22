@@ -8,6 +8,10 @@
     position: absolute;
     transition: transform 0.3s, opacity 0.3s;
 
+    &-placeholder {
+        position: relative;
+    }
+
     &_hidden {
         transform: translateX(-30px);
         opacity: 0;
